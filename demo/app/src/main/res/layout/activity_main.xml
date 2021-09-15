@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color_c5c5c5">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/remote_video_view_container"
+        android:layout_width="130dp"
+        android:layout_height="172.9dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@color/main_color_gray">
+
+    </FrameLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_face_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/iv_debug"
+        android:layout_marginStart="@dimen/x24"
+        android:layout_marginTop="@dimen/x24"
+        android:padding="@dimen/x12"
+        android:background="#80050f14"
+        android:textColor="@color/white"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_face_info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tv_face_info"
+        android:layout_marginStart="@dimen/x24"
+        android:layout_marginTop="@dimen/x24"
+        android:padding="@dimen/x12"
+        android:background="#80050f14"
+        android:textColor="@color/white"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_body_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_30"
+        android:text="@string/toast_not_detect_body"/>
+
+    <ImageView
+        android:id="@+id/iv_switch_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/x24"
+        android:layout_marginTop="@dimen/x24"
+        android:src="@drawable/camera_change"/>
+
+    <ImageView
+        android:id="@+id/iv_debug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/x24"
+        android:layout_marginTop="@dimen/x24"
+        android:src="@drawable/debug"/>
+
+    <com.kyleduo.switchbutton.SwitchButton
+        android:visibility="gone"
+        android:id="@+id/switch_btn_body"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@id/bottom_navigator"
+        android:layout_alignParentEnd="true"
+        android:checked="true"
+        android:textColor="@drawable/switch_button_text"
+        android:textSize="12dp"
+        app:kswBackDrawable="@drawable/bg_switch_button_white"
+        app:kswTextOff="@string/pta_human_half_body"
+        app:kswTextOn="@string/pta_human_full_body"
+        app:kswTextExtra="14dp"
+        app:kswThumbDrawable="@drawable/swith_thumb"
+        app:kswThumbHeight="44dp"
+        app:kswThumbWidth="44dp"
+        tools:kswThumbMarginBottom="-11dp"
+        tools:kswThumbMarginLeft="-7dp"
+        tools:kswThumbMarginRight="-7dp"
+        tools:kswThumbMarginTop="-4dp" />
+
+    <com.faceunity.agorawithfaceunity.view.BottomNavigationView
+        android:visibility="gone"
+        android:id="@+id/bottom_navigator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
